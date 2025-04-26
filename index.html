@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Hello LIFF</title>
+  <!-- LIFF v2 SDK -->
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+<body>
+  <h1 id="greeting">Loading...</h1>
+
+  <script>
+    // ここをあなたの LIFF ID に置き換える
+    const liffId = "YOUR_LIFF_ID";
+
+    async function main() {
+      await liff.init({ liffId });        // LIFF を初期化 :contentReference[oaicite:0]{index=0}
+      document.getElementById("greeting").textContent = "Hello World!";
+    }
+
+    main();
+  </script>
+</body>
+</html>
